@@ -1,12 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
-int fact( int n){
 
-if(n==1){
-return 1;}
+
+void name ( int i, int n){
+
+if(i>n){
+return;}
 
 else {
-return n*fact(n-1);}}
+
+cout<<i<<endl;
+name(i+1,n);}}
 
 int main (){
 
@@ -14,7 +18,5 @@ int n;
 cout<<"Enter the value: ";
 cin>>n; 
 
-int a = fact(n);
-cout<<"Factorial is "<<a;
-
+name(1,n);
 return 0;}
